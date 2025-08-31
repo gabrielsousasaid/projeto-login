@@ -35,6 +35,9 @@ section#login{
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.448);
+
+    transition: width 0.3s, height 0.3s; /*Ativou transição na mudança de largura e altura dos medias queries*/
+    transition-timing-function: ease; /*Deixou mais suavizada a transição*/
 }
 section#login > div#imagem{
     display: block; /*Por algum motivo transformou as duas divs em blocos*/
@@ -46,4 +49,11 @@ section#login > div#imagem{
 section#login > div#formulario{
     display: block; /*Por algum motivo transformou as duas divs em blocos*/
     padding: 10px;
+}
+div#formulario{
+    text-align: center;
+    margin-bottom: 10px;
+}
+div#formulario > p{
+    font-size: 0.8em;
 }
