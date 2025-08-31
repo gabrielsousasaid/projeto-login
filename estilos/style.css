@@ -27,7 +27,6 @@ section#login{
     position: absolute; /*Definimos para podermos mover a posição da caixa*/
     top: 50%;
     left: 50%; /*Técnica utilizada para centralizar uma caixa com o top e left em 50 e o transform: translate em -50 e -50*/
-    transform: translate(-50%, -50%);
     overflow: hidden; /*Esconde todo conteúdo que vaza do arredondamento do border-radius*/
 
     background-color: white;
@@ -36,6 +35,7 @@ section#login{
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.448);
 
+    transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s; /*Ativou transição na mudança de largura e altura dos medias queries*/
     transition-timing-function: ease; /*Deixou mais suavizada a transição*/
 }
@@ -59,12 +59,35 @@ div#formulario > p{
 }
 form > div.campo{ /*Por isso colocamos os campos do formulário dentro de uma div com uma classe campo, para podermos personalizar a cor de fundo, a caixa em que está contida*/
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 div.campo > label{
     display: none; /*Fizemos as labels sumirem*/
+}
+div.campo > span{ /*Personalização dos ícones do google que usamos para login*/
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{ /*Personalização do campo de formuláro. POSSIBILIDADES INFINITAS DE PERSONALIZAÇÃO. Basta praticar e treinar*/
+    background-color: #72ede9;
+    font-size: 1em;
+    width: calc(100% - 46px); /*fizemos isso para deixar os campos na mesma linha que o ícone*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    transform: translateY(-12px);/*fizemos isso para deixar os campos na mesma linha que o ícone*/
+}
+div.campo > input:focus-within { /*Isso faz com que quando clicamos na caixa para digitar, ela fique em branco*/
+    background-color: white;
 }
 form > input[type=submit]{ /*Muito legal, aqui descubrimos uma nova forma de classificar alguma tag para aplicar CSS, colocando o parametro da tag*/
     display: block; /*Transformamos em bloco para fazer o botão ficar sozinho na linha*/
