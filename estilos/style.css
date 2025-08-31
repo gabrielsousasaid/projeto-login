@@ -32,7 +32,7 @@ section#login{
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.448);
 
@@ -55,5 +55,50 @@ div#formulario{
     margin-bottom: 10px;
 }
 div#formulario > p{
+    font-size: 0.8em;
+}
+form > div.campo{ /*Por isso colocamos os campos do formulário dentro de uma div com uma classe campo, para podermos personalizar a cor de fundo, a caixa em que está contida*/
+    background-color: #5f2c82;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+div.campo > label{
+    display: none; /*Fizemos as labels sumirem*/
+}
+form > input[type=submit]{ /*Muito legal, aqui descubrimos uma nova forma de classificar alguma tag para aplicar CSS, colocando o parametro da tag*/
+    display: block; /*Transformamos em bloco para fazer o botão ficar sozinho na linha*/
+    font-size: 1em;
+    width: 100%; /*Configurando isso faz com que ele ocupe a largura toda da caixa que estava contida*/
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none; /*Removemos a borda do input type submit*/
+    border-radius: 5px;
+    cursor: pointer; /*Definimos que quando passarmos o mouse em cima o cursor fique uma mãozinha*/
+}
+
+form > input[type=submit]:hover{
+    background-color: #2a5c5a;
+} /*Note que acima e aqui agora, conseguimos personalizar um input de um form. AS POSSIBILIDADES SÃO INFINITAS NO CSS E HTML PARA PERSONALIZAÇÃO, BASTA PRATICAR SEM MEDO E FAZER ACONTECER*/
+
+form > a.botao{
+    display: block; /*Transformamos em bloco para quebrar a linha e deixar o elemento sozinho*/
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #2a5c5a;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+}
+form > a.botao:hover{
+    background-color: #59c1bd;
+}
+form >a.botao > span{
     font-size: 0.8em;
 }
